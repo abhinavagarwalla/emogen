@@ -11,6 +11,7 @@
 
 #include "SVMEmoDetector.h"
 #include "BoostEmoDetector.h"
+#include "ANNEmoDetector.h"
 #include "matrix_io.h"
 #include "FacePreProcessor.h"
 
@@ -123,7 +124,11 @@ int main(int argc, const char *argv[]) {
 
     if (method == "svm") {
       emodetector = new SVMEmoDetector(kCfactor, kMaxIteration, kErrorMargin);
-    } else {
+    }
+    else if(method == "ann") {
+      emodetector = new ANNEmoDetector();
+    }
+    else {
       emodetector = new BoostEmoDetector(kBoostType, kTrimWeight, kMaxDepth);
     }
 

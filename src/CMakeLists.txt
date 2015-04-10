@@ -33,6 +33,7 @@ add_library(emotime SHARED  facedetector/FaceDetector.cpp
                             training/Classifier.cpp
                             training/AdaBoostClassifier.cpp
                             training/SVMClassifier.cpp
+                            training/ANNClassifier.cpp
                             detector/FacePreProcessor.cpp
                             gaborbank/GaborBank.cpp
                             gaborbank/GaborKernel.h
