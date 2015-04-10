@@ -5,8 +5,10 @@ find_package(OpenCV COMPONENTS opencv_core opencv_ml opencv_imgproc
 
 add_executable(emotimevideodebug_cli emotimevideodebug_cli.cpp 
         ACapture.cpp VideoCapture.cpp AGui.cpp DebugGui.cpp
-        ../detector/EmoDetector.cpp ../detector/BoostEmoDetector.cpp ../detector/FacePreProcessor.cpp ../detector/SVMEmoDetector.cpp
-        ../training/Classifier.cpp ../training/AdaBoostClassifier.cpp ../training/SVMClassifier.cpp ../trainingANNClassifier.cpp ../facedetector/FaceDetector.cpp ../gaborbank/GaborBank.cpp
+        ../detector/EmoDetector.cpp ../detector/BoostEmoDetector.cpp ../detector/FacePreProcessor.cpp 
+        ../detector/SVMEmoDetector.cpp
+        ../training/Classifier.cpp ../training/AdaBoostClassifier.cpp ../training/SVMClassifier.cpp 
+        ../training/ANNClassifier.cpp ../facedetector/FaceDetector.cpp ../gaborbank/GaborBank.cpp
         ../utils/string_utils.cpp ../utils/matrix_io.cpp )
 target_link_libraries(emotimevideodebug_cli  ${OpenCV_LIBS} )
 INSTALL(TARGETS emotimevideodebug_cli DESTINATION ${ASSETDIR} )
@@ -14,8 +16,10 @@ INSTALL(TARGETS emotimevideodebug_cli DESTINATION ${ASSETDIR} )
 # Emotime Video Gui Tool
 add_executable(emotimevideo_cli emotimevideo_cli.cpp 
         ACapture.cpp VideoCapture.cpp AGui.cpp EmotimeGui.cpp
-        ../detector/EmoDetector.cpp ../detector/BoostEmoDetector.cpp ../detector/FacePreProcessor.cpp ../detector/SVMEmoDetector.cpp
-        ../training/Classifier.cpp ../training/AdaBoostClassifier.cpp ../training/SVMClassifier.cpp ../training/ANNClassifier.cpp ../facedetector/FaceDetector.cpp
+        ../detector/EmoDetector.cpp ../detector/BoostEmoDetector.cpp ../detector/FacePreProcessor.cpp 
+        ../detector/SVMEmoDetector.cpp
+        ../training/Classifier.cpp ../training/AdaBoostClassifier.cpp ../training/SVMClassifier.cpp 
+        ../training/ANNClassifier.cpp ../facedetector/FaceDetector.cpp
         ../gaborbank/GaborBank.cpp
         ../utils/string_utils.cpp ../utils/matrix_io.cpp )
 target_link_libraries(emotimevideo_cli ${OpenCV_LIBS} )
@@ -24,8 +28,10 @@ INSTALL(TARGETS emotimevideo_cli DESTINATION ${ASSETDIR} )
 # Emotime Webcam Gui Tool
 add_executable(emotimegui_cli emotimegui_cli.cpp 
         ACapture.cpp  VideoCapture.cpp AGui.cpp EmotimeGui.cpp
-        ../detector/EmoDetector.cpp ../detector/BoostEmoDetector.cpp ../detector/FacePreProcessor.cpp ../detector/SVMEmoDetector.cpp
-        ../training/Classifier.cpp ../training/AdaBoostClassifier.cpp ../training/SVMClassifier.cpp ../training/ANNClassifier.cpp
+        ../detector/EmoDetector.cpp ../detector/BoostEmoDetector.cpp ../detector/FacePreProcessor.cpp 
+        ../detector/SVMEmoDetector.cpp
+        ../training/Classifier.cpp ../training/AdaBoostClassifier.cpp ../training/SVMClassifier.cpp 
+        ../training/ANNClassifier.cpp
         ../facedetector/FaceDetector.cpp
         ../gaborbank/GaborBank.cpp
         ../utils/string_utils.cpp ../utils/matrix_io.cpp )

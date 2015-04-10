@@ -5,11 +5,12 @@ add_executable(emo_detector_cli emo_detector_cli.cpp
                                 EmoDetector.cpp
                                 BoostEmoDetector.cpp
                                 SVMEmoDetector.cpp
+                                ANNEmoDetector.cpp
                                 FacePreProcessor.cpp
                                 ../training/Classifier.cpp
                                 ../training/SVMClassifier.cpp
                                 ../training/AdaBoostClassifier.cpp
-                                ../training/ANNClassfier.cpp
+                                ../training/ANNClassifier.cpp
                                 ../utils/matrix_io.cpp
                                 ../gaborbank/GaborBank.cpp
                                 ../utils/string_utils.cpp

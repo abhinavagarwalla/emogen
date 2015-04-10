@@ -53,16 +53,20 @@ def dataset_run_training(dsFolder, config, mode):
   if mode == "ada":
     smode = "ada"
     classifFldr = join(dsFolder, config['CLASSIFIER_ADA_FOLDER'])
-  else:
+  elif mode == "svm":
     smode = "svm"
     classifFldr = join(dsFolder, config['CLASSIFIER_SVM_FOLDER'])
+  else:
+    smode = "ann"
+    classifFldr = join(dsFolder, config['CLASSIFIER_ANN_FOLDER'])
+
   dataset_train(smode, trainFldr, classifFldr, config)
 
 if __name__ == "__main__":
   parser = argparse.ArgumentParser()
   parser.add_argument("--cfg", default="dataset.cfg", help="Dataset config file name")
   parser.add_argument("dsFolder", help="Dataset base folder")
-  parser.add_argument("--mode", default="svm", choices=['ada', 'svm'], help="training mode: ada (AdaBoost) or svm")
+  parser.add_argument("--mode", default="ann", choices=['ada', 'svm', 'ann'], help="training mode: ada (AdaBoost) or svm")
   args = parser.parse_args()
 
   try:

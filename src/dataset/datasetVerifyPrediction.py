@@ -34,9 +34,12 @@ def dataset_do_prediction(dsfolder, config, mode, eye_detection, do_prints=True)
   if mode == 'svm':
     class_dir = os.path.join(dsfolder, config['CLASSIFIER_SVM_FOLDER'])
     mode_s = 'svm'
-  else:
+  elif mode=='ada':
     class_dir = os.path.join(dsfolder, config['CLASSIFIER_ADA_FOLDER'])
     mode_s = 'ada'
+  else:
+    class_dir = os.path.join(dsfolder, config['CLASSIFIER_ANN_FOLDER'])
+    mode_s = 'ann'
 
   execut = config['DETECTION_TOOL']
   print "INFO: detector tool '%s %s', eye detection: %r"%(execut, mode_s, eye_detection)
@@ -84,7 +87,7 @@ if __name__ == "__main__":
   parser.add_argument("--cfg", default="dataset.cfg", help="Dataset config file name")
   parser.add_argument("dsFolder", help="Dataset base folder")
   parser.add_argument("-v", "--verbose", action='store_true', help="verbosity")
-  parser.add_argument("--mode", default="adaboost", choices=['adaboost', 'svm'], help="training mode: adaboost or svm")
+  parser.add_argument("--mode", default="adaboost", choices=['adaboost', 'svm', 'ann'], help="training mode: adaboost or svm")
   parser.add_argument("--eye-correction", action="store_true", help="Perform eye correction on images")
   args = parser.parse_args()
 
