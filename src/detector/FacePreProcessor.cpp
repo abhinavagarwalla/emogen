@@ -13,7 +13,7 @@
 using std::string;
 using cv::Mat;
 
-namespace emotime {
+namespace emogen {
 
   void FacePreProcessor::init(std::string faceDetectorConfig, std::string eyesDetectorConfig, int
       width, int height, double nwidths, double nlambdas, double nthetas) {

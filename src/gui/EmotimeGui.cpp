@@ -7,16 +7,16 @@
 
 #include "EmotimeGui.h"
 
-namespace emotime{
+namespace emogen{
 
   EmotimeGui::EmotimeGui(FacePreProcessor* fp, EmoDetector* detect, int fps) :
-    EmotimeGui::AGui(new WebcamCapture(true), fp, detect, fps, "Emotime!") {
+    EmotimeGui::AGui(new WebcamCapture(true), fp, detect, fps, "Emogen!") {
 
   }
 
   EmotimeGui::EmotimeGui(ACapture* capture, FacePreProcessor* fp, EmoDetector*
       detect, int fps) : EmotimeGui::AGui(capture, fp, detect, fps,
-        "Emotime!") {
+        "Emogen!") {
    }
 
   EmotimeGui::~EmotimeGui() {

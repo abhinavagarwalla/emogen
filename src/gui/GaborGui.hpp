@@ -17,7 +17,7 @@
 #include "ACapture.h"
 #include "GaborBank.h"
 
-namespace emotime{
+namespace emogen{
 
   /**
    * @brief Gui for visualizing gabor bank effects

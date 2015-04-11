@@ -78,13 +78,13 @@ int main(int argc, const char* argv[]) {
   string infile(argv[2]);
   string outfile(argv[3]);
 
-  emotime::Classifier* classifier;
+  emogen::Classifier* classifier;
 	if (method == "svm") {
-    classifier = new emotime::SVMClassifier(emotime::kCfactor,
-        emotime::kMaxIteration, emotime::kErrorMargin);
+    classifier = new emogen::SVMClassifier(emogen::kCfactor,
+        emogen::kMaxIteration, emogen::kErrorMargin);
   } else {
-    classifier = new emotime::AdaBoostClassifier(emotime::kBoostType,
-        emotime::kTrimWeight, emotime::kMaxDepth);
+    classifier = new emogen::AdaBoostClassifier(emogen::kBoostType,
+        emogen::kTrimWeight, emogen::kMaxDepth);
   }
 
   int ret = 0;

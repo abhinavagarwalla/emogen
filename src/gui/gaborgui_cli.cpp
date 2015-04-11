@@ -15,7 +15,7 @@
 
 using namespace std;
 using namespace cv;
-using namespace emotime;
+using namespace emogen;
 
 void help() {
 	cout<<"Usage:"<<endl;

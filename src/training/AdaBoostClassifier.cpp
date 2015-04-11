@@ -18,7 +18,7 @@ using std::string;
 using std::cerr;
 using std::endl;
 
-namespace emotime {
+namespace emogen {
 
   AdaBoostClassifier::AdaBoostClassifier(int boost_type, double trim_weight, int max_depth) {
     this->params.boost_type = boost_type;

@@ -13,7 +13,7 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/ml/ml.hpp>
 
-namespace emotime {
+namespace emogen {
 
   /**
    * @class   ANNClassifier

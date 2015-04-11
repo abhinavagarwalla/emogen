@@ -16,7 +16,7 @@
 using namespace std;
 using namespace cv;
 
-namespace emotime{
+namespace emogen{
 
  /**
   * @class   ACapture

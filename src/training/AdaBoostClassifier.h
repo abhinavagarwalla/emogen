@@ -12,7 +12,7 @@
 
 #include <opencv2/opencv.hpp>
 
-namespace emotime {
+namespace emogen {
 
   /**
    * @class   AdaBoostClassifier

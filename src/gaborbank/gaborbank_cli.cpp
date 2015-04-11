@@ -16,7 +16,7 @@
 #include "GaborBank.h"
 #include "matrix_io.h"
 
-using namespace emotime;
+using namespace emogen;
 
 using std::cout;
 using std::cerr;

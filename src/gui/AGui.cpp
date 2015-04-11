@@ -7,7 +7,7 @@
 
 #include "AGui.h"
 
-namespace emotime{
+namespace emogen{
 
   AGui::AGui(ACapture* capt, FacePreProcessor* fp, EmoDetector* detect, int fps, string title) {
        capture = capt;

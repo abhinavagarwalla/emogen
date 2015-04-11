@@ -11,7 +11,7 @@
 
 #include "EmoDetector.h"
 
-namespace emotime{
+namespace emogen{
 
   /**
    * @class    BoostEmoDetector

@@ -21,9 +21,9 @@ using std::stringstream;
 using std::string;
 using std::pair;
 
-using namespace emotime;
+using namespace emogen;
 
-namespace emotime {
+namespace emogen {
 
   /**
    * @class    AGui
@@ -48,7 +48,7 @@ namespace emotime {
        *  @param[in]      title The title of the GUI
        *
        */
-      AGui(ACapture* capt, FacePreProcessor* fp, EmoDetector* detect, int fps, string title="AGui: Main Emotime GUI");
+      AGui(ACapture* capt, FacePreProcessor* fp, EmoDetector* detect, int fps, string title="AGui: Main Emogen GUI");
 
       /**
        *  @brief    Starts the gui

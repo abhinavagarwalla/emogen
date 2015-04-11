@@ -10,7 +10,7 @@
 
 #include "AGui.h"
 
-namespace emotime{
+namespace emogen{
 
   /**
    * @author   Luca Mella

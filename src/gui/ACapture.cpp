@@ -6,7 +6,7 @@
 
 #include "ACapture.h"
 
-namespace emotime{
+namespace emogen{
 
   ACapture::ACapture(bool toGray){
         toGrayscale=toGray;

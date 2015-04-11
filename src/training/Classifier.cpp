@@ -24,7 +24,7 @@ using std::pair;
 
 using cv::Mat;
 
-namespace emotime {
+namespace emogen {
 
   Classifier::Classifier() {
 

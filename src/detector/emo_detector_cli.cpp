@@ -26,7 +26,7 @@
 #include <iostream>
 
 using namespace cv;
-using namespace emotime;
+using namespace emogen;
 
 using std::cout;
 using std::endl;

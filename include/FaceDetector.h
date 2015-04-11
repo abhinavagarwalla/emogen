@@ -16,7 +16,7 @@
 
 #include <opencv2/opencv.hpp>
 
-namespace emotime {
+namespace emogen {
 
   /// Performance saving constant. Limit the dimension of the face retrieved. (NOT GOOD FOR TRAINING)
   const cv::Size kFaceSizeLimit = cv::Size(128,128);

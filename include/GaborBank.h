@@ -23,7 +23,7 @@
 #include "GaborKernel.h"
 
 
-namespace emotime {
+namespace emogen {
 
   /* Gabor Formula consts */
 
@@ -196,7 +196,7 @@ namespace emotime {
     private:
 
       /// Gabor bank
-      std::vector<emotime::GaborKernel*> bank;
+      std::vector<emogen::GaborKernel*> bank;
 
       /**
        * @brief: Gabor Kernel generator.

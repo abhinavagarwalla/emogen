@@ -11,7 +11,7 @@
 #include "ANNEmoDetector.h"
 #include "ANNClassifier.h"
 
-namespace emotime {
+namespace emogen {
 
   ANNEmoDetector::ANNEmoDetector() : EmoDetector() {
 

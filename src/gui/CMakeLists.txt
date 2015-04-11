@@ -13,7 +13,7 @@ add_executable(emotimevideodebug_cli emotimevideodebug_cli.cpp
 target_link_libraries(emotimevideodebug_cli  ${OpenCV_LIBS} )
 INSTALL(TARGETS emotimevideodebug_cli DESTINATION ${ASSETDIR} )
 
-# Emotime Video Gui Tool
+# Emogen Video Gui Tool
 add_executable(emotimevideo_cli emotimevideo_cli.cpp 
         ACapture.cpp VideoCapture.cpp AGui.cpp EmotimeGui.cpp
         ../detector/EmoDetector.cpp ../detector/BoostEmoDetector.cpp ../detector/FacePreProcessor.cpp 

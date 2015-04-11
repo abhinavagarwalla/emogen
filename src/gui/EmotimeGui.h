@@ -12,7 +12,7 @@
 #include "AGui.h"
 #include "WebcamCapture.h"
 
-namespace emotime{
+namespace emogen{
 
   /**
    * @class EmotimeGui

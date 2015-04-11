@@ -20,7 +20,7 @@
 #include "FaceDetector.h"
 #include "GaborBank.h"
 
-namespace emotime{
+namespace emogen{
 
   /**
    * @class   FacePreProcessor

@@ -11,7 +11,7 @@
 
 #include "ACapture.h"
 
-namespace emotime{
+namespace emogen{
 
   /**
    * @class ImageCapture

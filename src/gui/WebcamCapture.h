@@ -11,7 +11,7 @@
 
 #include "VideoCapture.h"
 
-namespace emotime {
+namespace emogen {
 
   /**
    * @class    WebcamCapture

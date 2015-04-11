@@ -11,7 +11,7 @@
 
 #include <opencv2/opencv.hpp>
 
-namespace emotime {
+namespace emogen {
 
   /// SVM C factor parameter
   const double kCfactor = 0.5;

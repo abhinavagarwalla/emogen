@@ -23,7 +23,7 @@
 
 using namespace cv;
 
-namespace emotime {
+namespace emogen {
 
   /// Emotion identification
   enum Emotion {

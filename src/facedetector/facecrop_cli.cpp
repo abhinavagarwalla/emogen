@@ -14,7 +14,7 @@
 #include "FaceDetector.h"
 #include "matrix_io.h"
 
-using namespace emotime;
+using namespace emogen;
 
 using std::cerr;
 using std::cout;

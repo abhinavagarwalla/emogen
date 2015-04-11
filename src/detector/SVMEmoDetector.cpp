@@ -11,7 +11,7 @@
 #include "SVMEmoDetector.h"
 #include "SVMClassifier.h"
 
-namespace emotime {
+namespace emogen {
 
   SVMEmoDetector::SVMEmoDetector(double C_factor, int max_iteration, double error_margin) : EmoDetector() {
     this->C_factor = C_factor;

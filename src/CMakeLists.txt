@@ -11,8 +11,8 @@ include_directories(${SRCDIR}/utils)
 include_directories(${SRCDIR}/detector)
 include_directories(${SRCDIR}/gui)
 
-SET(EMOTIME_LIB_FILES "")
-SET(EMOTIME_H_FILES "")
+SET(EMOGEN_LIB_FILES "")
+SET(EMOGEN_H_FILES "")
 
 add_subdirectory(training)
 add_subdirectory(facedetector)
@@ -25,8 +25,7 @@ add_subdirectory(gui)
 find_package(OpenCV COMPONENTS opencv_core opencv_ml opencv_imgproc
   opencv_highgui opencv_objdetect REQUIRED)
 
-# Emotime library
-add_library(emotime SHARED  facedetector/FaceDetector.cpp
+add_library(emogen SHARED  facedetector/FaceDetector.cpp
                             detector/EmoDetector.cpp
                             detector/BoostEmoDetector.cpp
                             detector/SVMEmoDetector.cpp
@@ -41,9 +40,9 @@ add_library(emotime SHARED  facedetector/FaceDetector.cpp
                             utils/string_utils.cpp
                                                   )
 
-target_link_libraries(emotime ${OpenCV_LIBS})
+target_link_libraries(emogen ${OpenCV_LIBS})
 
-INSTALL(TARGETS emotime DESTINATION ${ASSETDIR})
+INSTALL(TARGETS emogen DESTINATION ${ASSETDIR})
 
 INSTALL(FILES facedetector/FaceDetector.h
                utils/matrix_io.h utils/string_utils.h

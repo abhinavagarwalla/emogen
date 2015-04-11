@@ -17,7 +17,7 @@ using std::fabs;
 using cv::Size;
 using cv::Mat;
 
-namespace emotime {
+namespace emogen {
 
   GaborBank::~GaborBank() {
     this->emptyBank();
@@ -137,7 +137,7 @@ namespace emotime {
 
         for (_theta = kGaborThetaMin; _theta < kGaborThetaMax;
             _theta += (kGaborThetaMax - kGaborThetaMin)/((double)(nthetas<=0?1:nthetas))) {
-          emotime::GaborKernel* kern = this->generateGaborKernel(kernelSize,
+          emogen::GaborKernel* kern = this->generateGaborKernel(kernelSize,
               _sigma, _theta, _lambda, _gamma, _psi, CV_32F);
           bank.push_back(kern);
         }
@@ -190,7 +190,7 @@ namespace emotime {
           for (_theta = kGaborThetaMin; _theta < kGaborThetaMax;
                 _theta += (kGaborThetaMax - kGaborThetaMin)/((double)(nthetas<=0?1:nthetas))) {
 
-              emotime::GaborKernel* kern = this->generateGaborKernel(kernelSize,
+              emogen::GaborKernel* kern = this->generateGaborKernel(kernelSize,
                                                 _sigma, _theta, _lambda, _gamma, _psi, CV_32F);
               bank.push_back(kern);
           }
@@ -243,7 +243,7 @@ namespace emotime {
       //resize(image, image, featSize, CV_INTER_AREA);
       
       for (k = 0; k < bank.size(); k++) {
-        emotime::GaborKernel * gk = bank.at(k);
+        emogen::GaborKernel * gk = bank.at(k);
         Mat real = gk->getReal();
         Mat imag = gk->getImag();
         Mat freal = Mat(size, CV_32F);

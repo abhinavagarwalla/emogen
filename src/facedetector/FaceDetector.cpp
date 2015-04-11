@@ -21,7 +21,7 @@ using cv::CascadeClassifier;
 using std::string;
 using std::vector;
 
-namespace emotime {
+namespace emogen {
 
   FaceDetector::FaceDetector(std::string face_config_file, std::string eye_config_file){
 

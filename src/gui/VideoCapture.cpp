@@ -7,7 +7,7 @@
 
 #include "VideoCapture.h"
 
-namespace emotime{
+namespace emogen{
 
   VideoCapture::VideoCapture(int deviceID, bool grayScale): ACapture(grayScale) {
     cap.open(deviceID);

@@ -31,23 +31,20 @@ def launch_gui(dsfolder, config, mode, eye_detection, do_prints=True):
       config['GABOR_NWIDTHS'], config['GABOR_NLAMBDAS'],
       config['GABOR_NTHETAS'], mode_s] + classificators
 
-  print "Launching emotime gui! Smile :)"
+  print "Launching emogen gui! Smile :)"
   os.execv(execut, args);
 
 
 if __name__ == "__main__":
-  parser = argparse.ArgumentParser()
-  parser.add_argument("--cfg", default="dataset.cfg", help="Dataset config file name")
-  parser.add_argument("dsFolder", help="Dataset base folder")
-  parser.add_argument("-v", "--verbose", action='store_true', help="verbosity")
-  parser.add_argument("--mode", default="svm", choices=['ada', 'svm'], help="training mode: ada or svm")
-  parser.add_argument("--eye-correction", action="store_true", help="Perform eye correction on images")
-  args = parser.parse_args()
+
+  dsFolder = "my_dataset"
+  cfg = "example_dataset.cfg"
+  mode = "svm"
 
   try:
     config = {}
-    config = dcp.parse_ini_config(args.cfg)
-    launch_gui(args.dsFolder, config, args.mode, args.eye_correction)
+    config = dcp.parse_ini_config(cfg)
+    launch_gui(dsFolder, config, mode, True)
   except Exception as e:
     print "ERR: something wrong (%s)" % str(e)
     sys.exit(1)

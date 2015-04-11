@@ -26,7 +26,7 @@
 #include <map>
 #include <iostream>
 
-using namespace emotime;
+using namespace emogen;
 
 using std::cout;
 using std::cerr;
@@ -114,7 +114,7 @@ int main(int argc, const char* argv[]){
   cout<<"Insert the video file path: "; 
   std::getline(std::cin, infile);
   cout<<"Loading '"<<infile<<"'"<<endl;
-  emotime::VideoCapture capture=emotime::VideoCapture(infile, true/*grayscale*/);
+  emogen::VideoCapture capture=emogen::VideoCapture(infile, true/*grayscale*/);
   // Creating and starting the EmotimeGUI
   int fps = 120;
   try{

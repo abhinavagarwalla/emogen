@@ -7,9 +7,9 @@
 
 #include "DebugGui.h"
 
-namespace emotime{
+namespace emogen{
 
-  DebugGui::DebugGui(ACapture* capt, FacePreProcessor* fp, EmoDetector* detect, int fps) : AGui(capt, fp, detect, fps, "Emotime Video Debug Gui") {
+  DebugGui::DebugGui(ACapture* capt, FacePreProcessor* fp, EmoDetector* detect, int fps) : AGui(capt, fp, detect, fps, "Emogen Video Debug Gui") {
     faceWinTitle = string("AGui: Face");
     featsWinTitle = string("AGui: Features");
   }

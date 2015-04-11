@@ -12,7 +12,7 @@
 #include "BoostEmoDetector.h"
 #include "AdaBoostClassifier.h"
 
-namespace emotime {
+namespace emogen {
 
   BoostEmoDetector::BoostEmoDetector(int boost_type, double trim_weight, int max_depth) : EmoDetector() {
     this->boost_type = boost_type;

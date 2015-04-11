@@ -14,7 +14,7 @@ using std::string;
 using std::cerr;
 using std::endl;
 
-namespace emotime {
+namespace emogen {
 
   ANNClassifier::ANNClassifier() {
 

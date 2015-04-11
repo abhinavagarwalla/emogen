@@ -34,7 +34,7 @@ using std::endl;
 
 using cv::Mat;
 
-namespace emotime {
+namespace emogen {
 
   string emotionStrings(Emotion emo){
     switch (emo) {

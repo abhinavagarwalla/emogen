@@ -7,7 +7,7 @@
 
 #include "ImageCapture.h"
 
-namespace emotime{
+namespace emogen{
 
   ImageCapture::ImageCapture(string infile, bool grayScale): ACapture(grayScale) {
         image=imread(infile.c_str(), CV_LOAD_IMAGE_GRAYSCALE);
