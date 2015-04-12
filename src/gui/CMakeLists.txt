@@ -1,33 +1,33 @@
-# Emotime Video Debug Gui Tool
+# Emogen Video Debug Gui Tool
 
 find_package(OpenCV COMPONENTS opencv_core opencv_ml opencv_imgproc
   opencv_highgui opencv_objdetect REQUIRED)
 
-add_executable(emotimevideodebug_cli emotimevideodebug_cli.cpp 
+add_executable(emogenvideodebug_cli emogenvideodebug_cli.cpp 
         ACapture.cpp VideoCapture.cpp AGui.cpp DebugGui.cpp
         ../detector/EmoDetector.cpp ../detector/BoostEmoDetector.cpp ../detector/FacePreProcessor.cpp 
         ../detector/SVMEmoDetector.cpp
         ../training/Classifier.cpp ../training/AdaBoostClassifier.cpp ../training/SVMClassifier.cpp 
         ../training/ANNClassifier.cpp ../facedetector/FaceDetector.cpp ../gaborbank/GaborBank.cpp
         ../utils/string_utils.cpp ../utils/matrix_io.cpp )
-target_link_libraries(emotimevideodebug_cli  ${OpenCV_LIBS} )
-INSTALL(TARGETS emotimevideodebug_cli DESTINATION ${ASSETDIR} )
+target_link_libraries(emogenvideodebug_cli  ${OpenCV_LIBS} )
+INSTALL(TARGETS emogenvideodebug_cli DESTINATION ${ASSETDIR} )
 
 # Emogen Video Gui Tool
-add_executable(emotimevideo_cli emotimevideo_cli.cpp 
-        ACapture.cpp VideoCapture.cpp AGui.cpp EmotimeGui.cpp
+add_executable(emogenvideo_cli emogenvideo_cli.cpp 
+        ACapture.cpp VideoCapture.cpp AGui.cpp EmogenGui.cpp
         ../detector/EmoDetector.cpp ../detector/BoostEmoDetector.cpp ../detector/FacePreProcessor.cpp 
         ../detector/SVMEmoDetector.cpp
         ../training/Classifier.cpp ../training/AdaBoostClassifier.cpp ../training/SVMClassifier.cpp 
         ../training/ANNClassifier.cpp ../facedetector/FaceDetector.cpp
         ../gaborbank/GaborBank.cpp
         ../utils/string_utils.cpp ../utils/matrix_io.cpp )
-target_link_libraries(emotimevideo_cli ${OpenCV_LIBS} )
-INSTALL(TARGETS emotimevideo_cli DESTINATION ${ASSETDIR} )
+target_link_libraries(emogenvideo_cli ${OpenCV_LIBS} )
+INSTALL(TARGETS emogenvideo_cli DESTINATION ${ASSETDIR} )
 
-# Emotime Webcam Gui Tool
-add_executable(emotimegui_cli emotimegui_cli.cpp 
-        ACapture.cpp  VideoCapture.cpp AGui.cpp EmotimeGui.cpp
+# Emogen Webcam Gui Tool
+add_executable(emogengui_cli emogengui_cli.cpp 
+        ACapture.cpp  VideoCapture.cpp AGui.cpp EmogenGui.cpp
         ../detector/EmoDetector.cpp ../detector/BoostEmoDetector.cpp ../detector/FacePreProcessor.cpp 
         ../detector/SVMEmoDetector.cpp
         ../training/Classifier.cpp ../training/AdaBoostClassifier.cpp ../training/SVMClassifier.cpp 
@@ -35,8 +35,8 @@ add_executable(emotimegui_cli emotimegui_cli.cpp
         ../facedetector/FaceDetector.cpp
         ../gaborbank/GaborBank.cpp
         ../utils/string_utils.cpp ../utils/matrix_io.cpp )
-target_link_libraries(emotimegui_cli ${OpenCV_LIBS} )
-INSTALL(TARGETS emotimegui_cli DESTINATION ${ASSETDIR} )
+target_link_libraries(emogengui_cli ${OpenCV_LIBS} )
+INSTALL(TARGETS emogengui_cli DESTINATION ${ASSETDIR} )
 
 # Gabor Parameter Tuning Gui Tool
 add_executable(gaborgui_cli gaborgui_cli.cpp  

@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
   args = parser.parse_args()
 
-  print(" ** Emotime ** ")
+  print(" ** Emogen ** ")
   print("   > Luca Mella")
   print("   > Daniele Bellavista")
   print("")

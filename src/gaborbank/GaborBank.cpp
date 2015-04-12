@@ -2,7 +2,6 @@
  *
  * @file    GaborBank.cpp
  *
- * @date    01/09/2014 11:50:56 PM
  * @brief   Contains implementation for GaborBank.h
  *
  * @details

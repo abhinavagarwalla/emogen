@@ -1,7 +1,6 @@
 /**
  *
  * @file    SVMEmoDetector.cpp
- * @date    12/27/2013 12:12:58 PM
  * @brief   Implementation of SVMEmoDetector
  *
  * @details
