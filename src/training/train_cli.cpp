@@ -12,7 +12,7 @@
 #include "Classifier.h"
 #include "SVMClassifier.h"
 #include "AdaBoostClassifier.h"
-
+#include "ANNClassifier.h"
 #include "TrainingParameters.h"
 
 #include <iostream>
