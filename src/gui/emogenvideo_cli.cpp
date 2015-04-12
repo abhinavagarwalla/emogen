@@ -1,9 +1,7 @@
 /**
  *
- * @file    emotimegui_cli.cpp
- * @author  Daniele Bellavista (daniele.bellavista@studio.unibo.it)
- * @date    12/31/2013 11:05:55 AM
- * @brief   Emotime GUI command line interface
+ * @file    emogengui_cli.cpp
+ * @brief   Emogen GUI command line interface
  *
  * @details
  *
@@ -13,7 +11,7 @@
 #include "BoostEmoDetector.h"
 #include "SVMEmoDetector.h"
 #include "matrix_io.h"
-#include "EmotimeGui.h"
+#include "EmogenGui.h"
 #include "FaceDetector.h"
 
 #include "TrainingParameters.h"
@@ -46,7 +44,7 @@ const double kNThetas = 4;
 
 void help(){
 	cout << "Usage:" << endl;
-	cout << "   emotimegui_cli <faceDetecXML> <eyeDetectXML> [<mode>] <classifier>{<classifier>}" << endl;
+	cout << "   emogengui_cli <faceDetecXML> <eyeDetectXML> [<mode>] <classifier>{<classifier>}" << endl;
 	cout << "Parameters:" << endl;
 	cout << "   <faceDetectXML>    - OpenCV cascade classifier configuration file (Haar or LBP) for face detection" << endl;
 	cout << "   <eyeDetectXML>     - OpenCV cascade classifier configuration file (Haar or LBP) for eye detection" << endl;
@@ -61,8 +59,8 @@ void help(){
 }
 
 void banner(){
-	cout << "EmotimeGui Utility:" << endl;
-	cout << "     GUI for emotime. Load the video specified in stdin" << endl;
+	cout << "EmogenGui Utility:" << endl;
+	cout << "     GUI for emogen. Load the video specified in stdin" << endl;
 }
 
 int main(int argc, const char* argv[]){
@@ -115,10 +113,10 @@ int main(int argc, const char* argv[]){
   std::getline(std::cin, infile);
   cout<<"Loading '"<<infile<<"'"<<endl;
   emogen::VideoCapture capture=emogen::VideoCapture(infile, true/*grayscale*/);
-  // Creating and starting the EmotimeGUI
+  // Creating and starting the EmogenGUI
   int fps = 120;
   try{
-    EmotimeGui gui(&capture, &facepreproc, emodetector, fps);
+    EmogenGui gui(&capture, &facepreproc, emodetector, fps);
     gui.run();
 	} catch (int e) {
 		cerr << "ERR: Exception #" << e << endl;
