@@ -1,7 +1,6 @@
 /**
  *
  * @file    BoostEmoDetector.h
- * @date    02/08/2014 11:47:13 AM
  * @brief   Definition of BoostEmoDetector
  *
  */
@@ -16,7 +15,6 @@ namespace emogen{
   /**
    * @class    BoostEmoDetector
    *
-   * @date    12/27/2013 11:59:26 AM
    *
    * @brief   Emotion detector specialization using AdaBoost
    *

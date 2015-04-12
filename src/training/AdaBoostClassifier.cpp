@@ -2,7 +2,6 @@
  *
  * @file    AdaBoostClassifier.cpp
  *
- * @date    01/09/2014 11:15:57 PM
  * @brief   Implementation for AdaBoostClassifier
  *
  * @details

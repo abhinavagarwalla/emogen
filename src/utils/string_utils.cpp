@@ -1,7 +1,6 @@
 /**
  *
  * @file    string_utils.cpp
- * @date    12/30/2013 02:26:11 PM
  * @brief   string_utils.h implementation
  *
  */

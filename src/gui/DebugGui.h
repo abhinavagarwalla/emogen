@@ -13,7 +13,6 @@
 namespace emogen{
 
   /**
-   * @author   Luca Mella
    * @date
    *
    * @brief   GUI for debugging purpose
