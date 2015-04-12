@@ -14,7 +14,8 @@ namespace emogen {
 
   /**
    * @class    SVMEmoDetector
-   * 
+   * @date    12/27/2013 11:59:26 AM
+   *
    * @brief   EmoDetector specialization using SVMClassifier
    *
    */

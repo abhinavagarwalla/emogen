@@ -15,7 +15,7 @@ from os.path import isfile
 def _subproc_call(args):
     """ Wrap a subprocess.call """
     param, comstr = args
-    retcode = subprocess.call(param, shell=False )
+    retcode=subprocess.call(param, shell=False )
     sys.stdout.write('.')
     sys.stdout.flush()
     if retcode==0:

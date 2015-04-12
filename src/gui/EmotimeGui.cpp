@@ -1,29 +1,29 @@
 /**
  *
- * @file    EmogenGui.cpp
- * @brief   Implementation of EmogenGUI
+ * @file    EmotimeGui.cpp
+ * @brief   Implementation of EmotimeGUI
  *
  */
 
-#include "EmogenGui.h"
+#include "EmotimeGui.h"
 
 namespace emogen{
 
-  EmogenGui::EmogenGui(FacePreProcessor* fp, EmoDetector* detect, int fps) :
-    EmogenGui::AGui(new WebcamCapture(true), fp, detect, fps, "Emogen!") {
+  EmotimeGui::EmotimeGui(FacePreProcessor* fp, EmoDetector* detect, int fps) :
+    EmotimeGui::AGui(new WebcamCapture(true), fp, detect, fps, "Emogen!") {
 
   }
 
-  EmogenGui::EmogenGui(ACapture* capture, FacePreProcessor* fp, EmoDetector*
-      detect, int fps) : EmogenGui::AGui(capture, fp, detect, fps,
+  EmotimeGui::EmotimeGui(ACapture* capture, FacePreProcessor* fp, EmoDetector*
+      detect, int fps) : EmotimeGui::AGui(capture, fp, detect, fps,
         "Emogen!") {
    }
 
-  EmogenGui::~EmogenGui() {
+  EmotimeGui::~EmotimeGui() {
     //delete this->capture;
   }
 
-  bool EmogenGui::newFrame(Mat& frame, pair<Emotion, float> prediction) {
+  bool EmotimeGui::newFrame(Mat& frame, pair<Emotion, float> prediction) {
     Mat copy;
     frame.copyTo(copy);
     stringstream ss, ss2;

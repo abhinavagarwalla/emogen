@@ -2,6 +2,7 @@
  *
  * @file    FaceDetector.cpp
  *
+ * @date    01/10/2014 12:26:04 AM
  * @brief   Implementation for FaceDetector
  *
  * @details

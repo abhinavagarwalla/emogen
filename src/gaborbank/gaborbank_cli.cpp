@@ -1,6 +1,8 @@
 /**
  *
  * @file    gaborbank_cli.cpp
+ * @author  Daniele Bellavista (daniele.bellavista@studio.unibo.it)
+ * @date    12/04/2013 10:33:42 AM
  * @brief   CLI interface for filtering an image using Gabor's Filters.
  *
  * @details 

@@ -20,6 +20,7 @@ namespace emogen{
 
  /**
   * @class   ACapture
+  * @date    12/31/2013 10:53:55 AM
   *
   * @brief   Generic frame capture interface
   *
