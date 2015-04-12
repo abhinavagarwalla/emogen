@@ -51,6 +51,36 @@ if __name__ == "__main__":
   if args.eye_correction:
     eye_args.append('--eye-correction')
 
+########################### Face Cropping
+  if not args.skip_facecrop:
+    print(" [1] Cropping faces...")
+
+    if subprocess.call(['python', './datasetCropFaces.py'] + eye_args + base_args) is not 0:
+      print(" [#] An Error occured! Exiting...")
+      sys.exit(1)
+  else:
+    print(" [1] Skipping face crop!")
+##########################################
+
+########################### Features computation
+  if subprocess.call(['python', './datasetFeatures.py'] + base_args) is not 0:
+    print(" [#] An Error occured! Exiting...")
+    sys.exit(1)
+  
+##########################################
+
+########################### Training files preparation
+  print(" [3] Preparing CSV files with training data using %s..."%args.prep_train_mode)
+
+  # Removing old csv files
+  train_fold = os.path.join(args.dsFolder, 'training')
+  [os.remove(os.path.join(train_fold, f)) for f in os.listdir(train_fold) if f.endswith(".csv")]
+
+  if subprocess.call(['python', './datasetPrepTrain.py'] + prep_mode_args + base_args) is not 0:
+    print(" [#] An Error occured! Exiting...")
+    sys.exit(1)
+##########################################
+
 ########################### Training
   print(" [4] Training with %s and selecting relevant features..."%args.mode)
 

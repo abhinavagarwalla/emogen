@@ -82,9 +82,11 @@ int main(int argc, const char* argv[]) {
 	if (method == "svm") {
     classifier = new emogen::SVMClassifier(emogen::kCfactor,
         emogen::kMaxIteration, emogen::kErrorMargin);
-  } else {
+  } else if(method == "ada"){
     classifier = new emogen::AdaBoostClassifier(emogen::kBoostType,
         emogen::kTrimWeight, emogen::kMaxDepth);
+  } else {
+    classifier = new emogen::ANNClassifier();
   }
 
   int ret = 0;
