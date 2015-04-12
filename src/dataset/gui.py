@@ -11,8 +11,8 @@ def launch_gui(dsfolder, config, mode, eye_detection, do_prints=True):
     class_dir = os.path.join(dsfolder, config['CLASSIFIER_SVM_FOLDER'])
     mode_s = 'svm'
   else:
-    class_dir = os.path.join(dsfolder, config['CLASSIFIER_ADA_FOLDER'])
-    mode_s = 'ada'
+    class_dir = os.path.join(dsfolder, config['CLASSIFIER_ANN_FOLDER'])
+    mode_s = 'ann'
 
   execut = config['GUI_TOOL']
 

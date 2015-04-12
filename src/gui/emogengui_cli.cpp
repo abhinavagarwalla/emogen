@@ -8,8 +8,8 @@
  */
 
 #include "WebcamCapture.h"
-#include "BoostEmoDetector.h"
 #include "SVMEmoDetector.h"
+#include "ANNEmoDetector.h"
 #include "matrix_io.h"
 #include "EmogenGui.h"
 #include "FaceDetector.h"
@@ -40,53 +40,11 @@ const double kNLambdas = 5;
 /// N-Thetas used during training
 const double kNThetas = 4;
 
-/**
- *  @brief          Prints the CLI banner
- *
- */
-void banner();
 
-/**
- *  @brief          Prints the CLI help
- *
- */
-void help();
-
-void help() {
-	cout << "Usage:" << endl;
-	cout << "   emogengui_cli <faceDetecXML> <eyeDetectXML> <width> <height> <nwidths> <nlambdas> <nthetas> [<mode>] <classifier>{<classifier>}" << endl;
-	cout << "Parameters:" << endl;
-	cout << "   <faceDetectXML>    - OpenCV cascade classifier configuration file (Haar or LBP) for face detection" << endl;
-	cout << "   <eyeDetectXML>     - OpenCV cascade classifier configuration file (Haar or LBP) for eye detection" << endl;
-	cout << "   <width>            - Width of the image, the input image will be scaled"<<endl;
-	cout << "   <height>           - Height of the image, the input image will be scaled"<<endl;
-	cout << "   <nwidths>          - "<<endl;
-	cout << "   <nlambdas>         - "<<endl;
-	cout << "   <nthetas>          - "<<endl;
-	cout << "   <mode>             - ada or svm (default ada)" << endl;
-	cout << "   <classifier>       - classificators list" << endl;
-	cout << endl;
-}
-
-void banner() {
-	cout << "EmogenGui Utility:" << endl;
-	cout << "     GUI for emogen" << endl;
-}
-
-
-/**
- *  @brief          Main
- *
- *  @param[in]      argc
- *  @param[in]     argv
- *
- *  @returns  1
- *
- */
 int main(int argc, const char* argv[]) {
   if (argc < 5) {
-		banner();
-		help();
+		//banner();
+		//help();
 		cerr << "ERR: missing parameters" << endl;
 		return -3;
 	}
@@ -124,7 +82,7 @@ int main(int argc, const char* argv[]) {
   if (mode == "svm") {
     emodetector = new SVMEmoDetector(kCfactor, kMaxIteration, kErrorMargin);
   } else {
-    emodetector = new BoostEmoDetector(kBoostType, kTrimWeight, kMaxDepth);
+    emodetector = new ANNEmoDetector();
   }
   emodetector->init(cl_paths);
 

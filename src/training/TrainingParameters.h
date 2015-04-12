@@ -19,13 +19,6 @@ namespace emogen {
   /// SVM error margin termination criteria
   const double kErrorMargin = 1e-6;
 
-  /// AdaBoost algorithm type
-  const int kBoostType = CvBoost::GENTLE;
-  /// AdaBoost trim weight value
-  const double kTrimWeight = 0.0;
-  /// AdaBoost max algorithm depth
-  const int kMaxDepth = 1;
-
 }
 
 

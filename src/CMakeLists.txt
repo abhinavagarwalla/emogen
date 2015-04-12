@@ -27,10 +27,8 @@ find_package(OpenCV COMPONENTS opencv_core opencv_ml opencv_imgproc
 
 add_library(emogen SHARED  facedetector/FaceDetector.cpp
                             detector/EmoDetector.cpp
-                            detector/BoostEmoDetector.cpp
                             detector/SVMEmoDetector.cpp
                             training/Classifier.cpp
-                            training/AdaBoostClassifier.cpp
                             training/SVMClassifier.cpp
                             training/ANNClassifier.cpp
                             detector/FacePreProcessor.cpp
@@ -47,6 +45,6 @@ INSTALL(TARGETS emogen DESTINATION ${ASSETDIR})
 INSTALL(FILES facedetector/FaceDetector.h
                utils/matrix_io.h utils/string_utils.h
                gaborbank/GaborBank.h gaborbank/GaborKernel.h
-               detector/EmoDetector.h detector/BoostEmoDetector.h detector/SVMEmoDetector.h detector/FacePreProcessor.h 
+               detector/EmoDetector.h detector/SVMEmoDetector.h detector/FacePreProcessor.h 
        DESTINATION "${HEADERDIR}")
 

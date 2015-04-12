@@ -13,5 +13,4 @@ CONFIGURE_FILE(datasetVerifyPrediction.py ${ASSETDIR} COPYONLY)
 # GUI tool
 CONFIGURE_FILE(gui.py ${ASSETDIR} COPYONLY)
 # Scripts
-CONFIGURE_FILE(train_models.sh ${ASSETDIR} COPYONLY)
 CONFIGURE_FILE(train_models.py ${ASSETDIR} COPYONLY)

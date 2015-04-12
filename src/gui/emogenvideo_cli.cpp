@@ -8,7 +8,7 @@
  */
 
 #include "VideoCapture.h"
-#include "BoostEmoDetector.h"
+#include "ANNEmoDetector.h"
 #include "SVMEmoDetector.h"
 #include "matrix_io.h"
 #include "EmogenGui.h"
@@ -104,7 +104,7 @@ int main(int argc, const char* argv[]){
   if (mode == "svm") {
     emodetector = new SVMEmoDetector(kCfactor, kMaxIteration, kErrorMargin);
   } else {
-    emodetector = new BoostEmoDetector(kBoostType, kTrimWeight, kMaxDepth);
+    emodetector = new ANNEmoDetector();
   }
 
   emodetector->init(cl_paths);

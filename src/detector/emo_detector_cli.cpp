@@ -8,7 +8,6 @@
  */
 
 #include "SVMEmoDetector.h"
-#include "BoostEmoDetector.h"
 #include "ANNEmoDetector.h"
 #include "matrix_io.h"
 #include "FacePreProcessor.h"
@@ -32,53 +31,10 @@ using std::cerr;
 using std::string;
 using std::pair;
 
-/**
- *  @brief          Prints the CLI banner
- *
- */
-void banner();
-
-/**
- *  @brief          Prints the CLI help
- *
- */
-void help();
-
-void help() {
-	cout << "Usage:" << endl;
-	cout << "   emo_detector_cli (svm|ada) <FaceDetecXML> (<EyeDetecXML>|none) <width> <height> <nwidths> <nlambdas> <nthetas> <svmXML> {<svmXML>}" << endl;
-	cout << "Parameters:" << endl;
-	cout << "   (svm|ada)       - Use ada or svm" << endl;
-	cout << "   <FaceDetectXML>   - OpenCV cascade classifier configuration file (Haar or LBP) for face detection" << endl;
-	cout << "   <EyeDetectXML>   - OpenCV cascade classifier configuration file (Haar or LBP) for eye detection. If the file is 'none', no eye correction is performed." << endl;
-	cout << "   <width>       - Width of the image, the input image will be scaled" << endl;
-	cout << "   <height>      - Height of the image, the input image will be scaled" << endl;
-	cout << "   <nwidths>     - " << endl;
-	cout << "   <nlambdas>    - " << endl;
-	cout << "   <nthetas>     - " << endl;
-	cout << "   <svmXML>    - The trained svm for detecting an expression " << endl;
-	cout << "                   Name format: emotion1_emotion2_..._vs_emotion... where emotion* is one of (neutral, contempt, disgust, fear, sadness, surprise)" << endl;
-	cout << endl;
-}
-
-void banner() {
-	cout << "EmoDetector Utility:" << endl;
-	cout << "     Detect emotions using trained classificator" << endl;
-}
-
-/**
- *  @brief          Main
- *
- *  @param[in]      argc
- *  @param[in]     argv
- *
- *  @returns  1
- *
- */
 int main(int argc, const char *argv[]) {
   if (argc < 9) {
-		banner();
-		help();
+		//banner();
+		//help();
 		cerr << "ERR: missing parameters" << endl;
 		return -3;
 	}
@@ -123,13 +79,9 @@ int main(int argc, const char *argv[]) {
     if (method == "svm") {
       emodetector = new SVMEmoDetector(kCfactor, kMaxIteration, kErrorMargin);
     }
-    else if(method == "ann") {
+    else{
       emodetector = new ANNEmoDetector();
     }
-    else {
-      emodetector = new BoostEmoDetector(kBoostType, kTrimWeight, kMaxDepth);
-    }
-
     emodetector->init(classifier_paths);
 
     cout << "Insert the image file path: " << endl;

@@ -87,7 +87,7 @@ if __name__ == "__main__":
   parser.add_argument("--cfg", default="dataset.cfg", help="Dataset config file name")
   parser.add_argument("dsFolder", help="Dataset base folder")
   parser.add_argument("-v", "--verbose", action='store_true', help="verbosity")
-  parser.add_argument("--mode", default="adaboost", choices=['adaboost', 'svm', 'ann'], help="training mode: adaboost or svm")
+  parser.add_argument("--mode", default="adaboost", choices=['svm', 'ann'], help="training mode: ann or svm")
   parser.add_argument("--eye-correction", action="store_true", help="Perform eye correction on images")
   args = parser.parse_args()
 

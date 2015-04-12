@@ -66,7 +66,7 @@ if __name__ == "__main__":
   parser = argparse.ArgumentParser()
   parser.add_argument("--cfg", default="dataset.cfg", help="Dataset config file name")
   parser.add_argument("dsFolder", help="Dataset base folder")
-  parser.add_argument("--mode", default="ann", choices=['ada', 'svm', 'ann'], help="training mode: ada (AdaBoost) or svm")
+  parser.add_argument("--mode", default="ann", choices=['svm', 'ann'], help="training mode: ann or svm")
   args = parser.parse_args()
 
   try:

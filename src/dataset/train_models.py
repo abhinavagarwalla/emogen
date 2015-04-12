@@ -10,7 +10,7 @@ if __name__ == "__main__":
   parser = argparse.ArgumentParser()
   parser.add_argument("--cfg", help="Dataset config file name", default='dataset.cfg')
   parser.add_argument("dsFolder", help="Dataset base folder")
-  parser.add_argument("--mode", choices=['adaboost', 'svm', 'ann'], help="training mode: adaboost or svm or ann", required=True)
+  parser.add_argument("--mode", choices=['svm', 'ann'], help="training mode: svm or ann", required=True)
   parser.add_argument("--prep-train-mode", choices=['1vsallext', '1vsall', '1vs1'], help="Training set preparation mode: 1vsall, 1vsall extended, 1vs1", required=True)
   parser.add_argument("--eye-correction", action="store_true", help="Apply eye correction to faces")
   parser.add_argument("--skip-facecrop", action="store_true", help="WARNING: To be set only if the facecropping was already performed with the same configuration file!")
@@ -18,13 +18,6 @@ if __name__ == "__main__":
 
   args = parser.parse_args()
 
-  print(" ** Emogen ** ")
-  print("   > Luca Mella")
-  print("   > Daniele Bellavista")
-  print("")
-  print(" [*] Remember! Before using the training, the dataset folder must be")
-  print("     initialized with datasetInit.py and datasetFillCK.py")
-  print("")
 
   if not os.path.isfile(args.cfg):
     print(" [#] ERROR: configuration file", args.cfg, "doesn't exists at path", os.path.abspath(args.cfg))
