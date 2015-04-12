@@ -2,7 +2,6 @@
  *
  * @file    train_cli.cpp
  *
- * @date    12/04/2013 10:33:42 AM
  * @brief   CLI interface for training a Classifier
  *
  * @details 

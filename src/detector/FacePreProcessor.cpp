@@ -1,7 +1,6 @@
 /**
  * @file    FacePreProcessor.cpp
  *
- * @date    01/10/2014 12:48:37 AM
  * @brief
  *
  * @details
