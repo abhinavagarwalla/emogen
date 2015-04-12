@@ -1,6 +1,5 @@
 /**
  * @file    EmoDetector.cpp
- * @date    01/10/2014 01:12:27 AM
  * @brief
  *
  * @details

@@ -2,7 +2,7 @@
  *
  * @file    FaceDetector.h
  *
- * @date    01/10/2014 12:26:04 AM
+ * 
  * @brief   Defintion of FaceDetector
  *
  * @details
