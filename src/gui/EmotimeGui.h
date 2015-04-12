@@ -1,12 +1,12 @@
 /**
  *
- * @file    EmogenGui.h
- * @brief   Definition of EmogenGUI
+ * @file    EmotimeGui.h
+ * @brief   Definition of EmotimeGUI
  *
  */
 
-#ifndef EMOGENGUI_H
-#define EMOGENGUI_H
+#ifndef EMOTIMEGUI_H
+#define EMOTIMEGUI_H
 
 
 #include "AGui.h"
@@ -15,27 +15,27 @@
 namespace emogen{
 
   /**
-   * @class EmogenGui
+   * @class EmotimeGui
    *
    * @brief Gui that detects emotion.
    *
    */
-  class EmogenGui : public AGui {
+  class EmotimeGui : public AGui {
 
     public:
 
       /**
-       *  @brief          Creates an EmogenGUI with a webcam capture
+       *  @brief          Creates an EmotimeGUI with a webcam capture
        *
        *  @param[in]      fp    The face preprocessor to use
        *  @param[in]      detect  An EmoDetector instance
        *  @param[in]      fps  Desired frame per second
        *
        */
-      EmogenGui(FacePreProcessor* fp, EmoDetector* detect, int fps);
+      EmotimeGui(FacePreProcessor* fp, EmoDetector* detect, int fps);
 
        /**
-        *  @brief          Creates an EmogenGUI with a custom capture
+        *  @brief          Creates an EmotimeGUI with a custom capture
         *
         *  @param[in]      capture    The ACapture to use
         *  @param[in]      fp    The face preprocessor to use
@@ -43,9 +43,9 @@ namespace emogen{
         *  @param[in]      fps  Desired frame per second
         *
         */
-      EmogenGui(ACapture * capture, FacePreProcessor* fp, EmoDetector* detect, int fps);
+      EmotimeGui(ACapture * capture, FacePreProcessor* fp, EmoDetector* detect, int fps);
 
-      ~EmogenGui();
+      ~EmotimeGui();
 
     protected:
 
@@ -66,5 +66,5 @@ namespace emogen{
 
 }
 
-#endif /* !EMOGENGUI_H */
+#endif /* !EMOTIMEGUI_H */
 

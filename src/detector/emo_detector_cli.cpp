@@ -1,6 +1,8 @@
 /**
  *
  * @file    emo_detector_cli.cpp
+ * @author  Daniele Bellavista (daniele.bellavista@studio.unibo.it)
+ * @date    12/27/2013 12:18:32 PM
  * @brief
  *
  * @details
