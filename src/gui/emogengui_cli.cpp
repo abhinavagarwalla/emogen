@@ -65,7 +65,7 @@ int main(int argc, const char* argv[]) {
   mode = string(argv[8]);
 
 	if (mode != "svm" && mode != "ada") {
-    mode = "ada";
+    mode = "ann";
     i = 8;
   } else {
     i = 9;
